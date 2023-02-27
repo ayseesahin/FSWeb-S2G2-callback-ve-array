@@ -8,6 +8,9 @@ const { fifaData } = require('./fifa.js')
 
 //(a) 2014 Dünya kupası Finali Evsahibi takım ismi (dizide "Home Team Name" anahtarı)
 
+console.log(fifaData["Home Team Name"]);
+
+
 //(b) 2014 Dünya kupası Finali Deplasman takım ismi  (dizide "Away Team Name" anahtarı)
 
 //(c) 2014 Dünya kupası finali Ev sahibi takım golleri (dizide "Home Team Goals" anahtarı)
@@ -25,11 +28,13 @@ const { fifaData } = require('./fifa.js')
 	💡 İPUCU - verilen data içindeki nesnelerin(objects) "Stage" anahtarına bakmalısınız
 */
 
-function Finaller(/* kodlar buraya */) {
+function Finaller(fifaDataStage) {
 	
-    /* kodlar buraya */
+   const filtrelenenData = fifaDataStage.filter((mac) => (mac.stage)) 
+	
+    return filtrelenenData;
 }
-
+console.log(Finaller(fifaData));
 
 
 /*  Görev 3: 
